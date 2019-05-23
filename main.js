@@ -5,7 +5,7 @@ function addRestourants(element,cards) {
     element.innerHTML +=`
     <div class="container__card">
       <a href="#!" id ="${el['id']}">
-      <img  class="card__img" src='${el['image']}'>
+      <img  class="card__img" src='./${el['image']}'>
       </a>
       <div class="card__description">
         <h3 class="description__text">${el['name']}</h3>
