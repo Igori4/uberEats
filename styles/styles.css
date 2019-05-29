@@ -280,11 +280,12 @@ ul {
   height: 65px;
   width: 65px;
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   background: #59BD5A;
-  color: white;
-  font-size: 50px;
-  right: 10px;
+  right: 20px;
+}
+.footer .up-scroll img {
+  width: 22px;
 }
 
 .language__container {
