@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <script src="main.js" type="module" defer></script>
 </head>
@@ -41,6 +41,19 @@
       <div class="container__search-line">
           <input type="text" class="search-input" placeholder="Search for restourant on cuisine">
           <img src="./images/Shape.png" alt="shape" class="search-shape">
+      </div>
+      <div class="nav__location-min">
+        <form action="#">
+          <div class="when">
+            <label for="location__input-time">When</label>
+            <input type="text" class="location__input-time" id="location__input-time" placeholder="ASAP">
+          </div>
+          <div class="to">
+            <label for="location__input-to">To</label>
+            <input type="text" class="location__input-to" id="location__input-to" placeholder="ul.Tarasivska ST, 16">
+            <div class="location__logo"><img src="./images/location.svg" alt="location_logo"></div>
+          </div>
+        </form>
       </div>
       <div class="container__restourants">
         <h1 class="restourants__location-text">Kyiv Restourants</h1>
@@ -90,8 +103,10 @@
           </div>
         </div>
         <div class="links-to-market">
-          <a href="!#"><img src="./images/play-market.png" alt="play-market"></a>  
-          <a href="!#"><img src="./images/Download_on_the_App_Store_.png" alt="app-store"></a> 
+          <div class="images-market">
+            <a href="!#"><img src="./images/play-market.png" alt="play-market"></a>  
+            <a href="!#"><img src="./images/Download_on_the_App_Store_.png" alt="app-store"></a> 
+          </div>
         </div>
         <div class="copyright">
           <ul class="copyright-items">
@@ -106,6 +121,7 @@
             </li>
           </ul>
         </div>
+        <button class="up-scroll" href=".header">&#129025;</button>
     </div>
   </footer>
 </body>

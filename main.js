@@ -20,3 +20,9 @@ function addRestourants(element,cards) {
 
 addRestourants(document.querySelector('[data-element="restourant-cards"]'), cards);
 
+function scrollup() {
+  window.scrollTo(0, 0);
+  console.log('sdf')
+}
+
+document.querySelector('.up-scroll').addEventListener('click', scrollup);
