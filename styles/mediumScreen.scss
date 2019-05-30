@@ -1,0 +1,33 @@
+
+@media ( min-width: 640px) {
+  
+    .nav__location-min {
+      display: none;
+    }
+  
+    nav {
+      padding: 0 10px;
+    }
+  
+    .container__card {
+  
+      width: 40%;
+  
+      img {
+        width: 100%;
+      }
+    }
+  
+    .arrow-for-select {
+      left: 150px;
+    }
+  
+    .footer__container-info {
+      justify-content: space-between;
+    }
+  
+    .copyright-items {
+      justify-content: space-evenly;
+    }
+  
+  }

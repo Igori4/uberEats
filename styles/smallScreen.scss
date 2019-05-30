@@ -1,0 +1,119 @@
+@media (max-width: 639px) {
+    .header {
+    padding: 15px 20px;
+  
+      .nav {
+      padding: 0;
+      justify-content: space-around;
+  
+        .nav__location {
+          display: none;
+        }
+      }
+    }
+    .button__basket-add {
+      display: none;
+    }
+  
+    .container__search-line {
+      max-width: 470px;
+    }
+  
+    .nav__location-min {
+      margin: 45px 0px;
+  
+      form {
+        display: flex;
+        justify-content: space-evenly;
+  
+        label {
+         @include form-label-style;
+        }
+  
+        .location__input-time {
+          height: 40px;
+          width: 65px;
+          padding: 10px;
+          border: 1px solid #E0E0E0;
+          border-radius: 2px;
+        }
+      }
+  
+      .when, .to {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+  
+      .location__input-to::placeholder,.location__input-to {
+        @include form-text-desctioption;
+      }
+      .location__input-time::placeholder,.location__input-time {
+        @include form-text-desctioption;
+      }
+  
+      .location__input-to {
+        height: 40px;
+        border: 1px solid #E0E0E0;
+        border-radius: 2px;
+        padding-left: 30px;
+      }
+  
+      .location__logo {
+        position: absolute;
+        top: 29px;
+        left: 10px;
+      }
+    }
+  
+    .container__card {
+  
+      width: 70%;
+  
+      img {
+        width: 100%;
+      }
+  
+    }
+  
+    .restourants__cards {
+      flex-direction: column;
+      align-items: center;
+  
+    }
+  
+    .footer__container-info {
+      flex-direction: column;
+    }
+  
+    .languages-social-links {
+      width: 180px;
+    }
+  
+    .arrow-for-select {
+      left: 155px;
+    }
+  
+    .about-us-list, .addition-info-list {
+      padding: 0;
+      margin: 0;
+  
+      li {
+        margin: 10px 0;
+      }
+    }
+  
+    .addition-info-list {
+      margin: 0;
+    }
+  
+    .copyright-items {
+      flex-direction: column;
+      padding: 0;
+  
+      li {
+        margin-top: 10px;
+      }
+    }
+  
+  }

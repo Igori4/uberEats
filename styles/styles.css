@@ -22,7 +22,7 @@ ul {
   cursor: pointer;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 639px) {
   .header {
     padding: 15px 20px;
   }
@@ -38,12 +38,16 @@ ul {
     display: none;
   }
 
+  .container__search-line {
+    max-width: 470px;
+  }
+
   .nav__location-min {
     margin: 45px 0px;
   }
   .nav__location-min form {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .nav__location-min form label {
     font-family: "Roboto", "sans-serif";
@@ -90,6 +94,13 @@ ul {
     left: 10px;
   }
 
+  .container__card {
+    width: 70%;
+  }
+  .container__card img {
+    width: 100%;
+  }
+
   .restourants__cards {
     flex-direction: column;
     align-items: center;
@@ -109,7 +120,7 @@ ul {
 
   .about-us-list, .addition-info-list {
     padding: 0;
-    margin: 20px 0 0;
+    margin: 0;
   }
   .about-us-list li, .addition-info-list li {
     margin: 10px 0;
@@ -127,6 +138,34 @@ ul {
     margin-top: 10px;
   }
 }
+@media (min-width: 640px) {
+  .nav__location-min {
+    display: none;
+  }
+
+  nav {
+    padding: 0 10px;
+  }
+
+  .container__card {
+    width: 40%;
+  }
+  .container__card img {
+    width: 100%;
+  }
+
+  .arrow-for-select {
+    left: 150px;
+  }
+
+  .footer__container-info {
+    justify-content: space-between;
+  }
+
+  .copyright-items {
+    justify-content: space-evenly;
+  }
+}
 .header {
   padding: 16px 0;
   box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
@@ -138,7 +177,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 0 50px;
 }
 
 .nav__button-singIn {
@@ -147,6 +185,7 @@ ul {
   background-color: #fff;
   border: 1px solid #E0E0E0;
   border-radius: 2px;
+  margin-left: 10px;
 }
 .nav__button-singIn .button__link-singIn {
   font-family: "Roboto", "sans-serif";
@@ -163,6 +202,7 @@ ul {
   width: 80px;
   background: #262626;
   border-radius: 2px;
+  margin: 0 10px;
   border: none;
 }
 .nav__button-register .button__link-register {
@@ -183,7 +223,7 @@ ul {
   border-bottom: 1px solid #E0E0E0;
   position: relative;
   padding-bottom: 15px;
-  margin: 50px 0;
+  margin: 50px auto;
 }
 .container__search-line .search-input {
   width: 100%;
@@ -211,12 +251,13 @@ ul {
   font-weight: 400;
   line-height: 34px;
   margin-bottom: 20px;
+  margin-left: 10%;
 }
 
 .restourants__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-content: center;
 }
 
@@ -224,7 +265,6 @@ ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 80px;
   justify-content: space-around;
 }
 .card__description .description__text {
@@ -251,6 +291,10 @@ ul {
 
 .container__card {
   margin-bottom: 30px;
+}
+
+.container__card:hover {
+  opacity: 0.6;
 }
 
 .footer {
@@ -298,6 +342,7 @@ ul {
   border-radius: 2px;
   border: none;
   font-family: "Roboto", "sans-serif";
+  min-width: 180px;
   font-size: 13px;
   color: #fff;
   line-height: 15px;
@@ -359,6 +404,52 @@ ul {
   line-height: 13px;
   color: #fff;
   margin-top: 10px;
+}
+
+.nav__location {
+  position: relative;
+}
+.nav__location .location__input-from {
+  height: 40px;
+  width: 65px;
+  padding: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+}
+.nav__location .location__input-from::placeholder, .nav__location .location__input-from {
+  color: #1D1D1D;
+  font-family: "Roboto", "sans-serif";
+  font-size: 16px;
+  line-height: 24px;
+}
+.nav__location .nav__location-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #626262;
+  margin: 0 6px;
+}
+.nav__location .location__input-to {
+  height: 40px;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+  padding-left: 30px;
+}
+.nav__location .location__input-to::placeholder, .nav__location .location__input-to {
+  color: #1D1D1D;
+  font-family: "Roboto", "sans-serif";
+  font-size: 16px;
+  line-height: 24px;
+}
+.nav__location .location__logo {
+  position: absolute;
+  left: 105px;
+  top: 10px;
+}
+
+.nav__items {
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

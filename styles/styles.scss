@@ -2,8 +2,6 @@ $main-color-font:#1D1D1D;
 $main-font: "Roboto","sans-serif";
 $breackpoint-small-device: 500px;
 
-@import 'reset';
-
 @mixin form-text-desctioption {
   color: $main-color-font;
   font-family: $main-font;
@@ -21,114 +19,11 @@ $breackpoint-small-device: 500px;
   margin-bottom: 5px;
 }
 
-@media (max-width: 450px) {
-  .header {
-  padding: 15px 20px;
+@import 'reset';
 
-    .nav {
-    padding: 0;
-    justify-content: space-around;
+@import 'smallScreen';
 
-      .nav__location {
-        display: none;
-      }
-    }
-  }
-  .button__basket-add {
-    display: none;
-  }
-
-  .nav__location-min {
-    margin: 45px 0px;
-
-    form {
-      display: flex;
-      justify-content: space-around;
-
-      label {
-       @include form-label-style;
-      }
-
-      .location__input-time {
-        height: 40px;
-        width: 65px;
-        padding: 10px;
-        border: 1px solid #E0E0E0;
-        border-radius: 2px;
-      }
-    }
-
-    .when, .to {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .location__input-to::placeholder,.location__input-to {
-      @include form-text-desctioption;
-    }
-    .location__input-time::placeholder,.location__input-time {
-      @include form-text-desctioption;
-    }
-
-    .location__input-to {
-      height: 40px;
-      border: 1px solid #E0E0E0;
-      border-radius: 2px;
-      padding-left: 30px;
-    }
-
-    .location__logo {
-      position: absolute;
-      top: 29px;
-      left: 10px;
-    }
-  }
-
-  .restourants__cards {
-    flex-direction: column;
-    align-items: center;
-
-  }
-
-  .footer__container-info {
-    flex-direction: column;
-  }
-
-  .languages-social-links {
-    width: 180px;
-  }
-
-  .arrow-for-select {
-    left: 155px;
-  }
-
-  .about-us-list, .addition-info-list {
-    padding: 0;
-    margin: 20px 0 0;
-
-    li {
-      margin: 10px 0;
-    }
-  }
-
-  .addition-info-list {
-    margin: 0;
-  }
-
-  .copyright-items {
-    flex-direction: column;
-    padding: 0;
-
-    li {
-      margin-top: 10px;
-    }
-  }
-
-
-
-
-}
+@import 'mediumScreen';
 
 .header {
   padding: 16px 0;
@@ -141,8 +36,6 @@ $breackpoint-small-device: 500px;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto; 
-  padding: 0 50px;
-
 }
 
 .nav__button-singIn {
@@ -151,6 +44,7 @@ $breackpoint-small-device: 500px;
   background-color: #fff;
   border: 1px solid #E0E0E0;
   border-radius: 2px;
+  margin-left: 10px;
 
   .button__link-singIn {
     font-family: $main-font;
@@ -168,6 +62,7 @@ $breackpoint-small-device: 500px;
   width: 80px;
   background: #262626;
   border-radius: 2px;  
+  margin: 0 10px;
   border: none;
   
   .button__link-register {
@@ -181,6 +76,60 @@ $breackpoint-small-device: 500px;
   }
 }
 
+
+.nav__location {
+  position: relative;
+
+  .location__input-from {
+    height: 40px;
+    width: 65px;
+    padding: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 2px;
+  }
+
+  .location__input-from::placeholder,.location__input-from {
+    color: $main-color-font;
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .nav__location-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #626262;
+    margin: 0 6px;
+  }
+
+  .location__input-to {
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    border-radius: 2px;
+    padding-left: 30px;
+  }
+
+  .location__input-to::placeholder, .location__input-to {
+    color: $main-color-font;
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .location__logo {
+    position: absolute;
+    left: 105px;
+    top: 10px;
+  }
+}
+
+.nav__items {
+  display: flex;
+  align-items: center;
+
+}
+
 .main {
   padding: 0 10px;
 }
@@ -189,7 +138,7 @@ $breackpoint-small-device: 500px;
   border-bottom: 1px solid #E0E0E0;
   position: relative;
   padding-bottom: 15px;
-  margin: 50px 0;
+  margin: 50px auto;
 
   .search-input {
     width: 100%;
@@ -220,12 +169,14 @@ $breackpoint-small-device: 500px;
   font-weight: 400;
   line-height: 34px;
   margin-bottom: 20px;
+  margin-left: 10%;
+
 }
 
 .restourants__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-content: center;
 }
 
@@ -233,7 +184,6 @@ $breackpoint-small-device: 500px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 80px;
   justify-content: space-around;
 
   .description__text {
@@ -263,6 +213,10 @@ $breackpoint-small-device: 500px;
 
 .container__card {
   margin-bottom: 30px;
+}
+
+.container__card:hover {
+  opacity: 0.6;
 }
 
 
@@ -316,6 +270,7 @@ $breackpoint-small-device: 500px;
     border-radius: 2px;
     border: none;
     font-family: $main-font;
+    min-width: 180px;
     font-size: 13px;
     color: #fff;
     line-height: 15px;
@@ -389,264 +344,3 @@ $breackpoint-small-device: 500px;
     margin-top: 10px;
   }
 }
-
-// }
-
-// .links-to-market {
-//   height: 150px;
-//   border-bottom: 1px solid #ffffff6b;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: row;
-//   justify-content: center;
-
-//   a {
-//     margin: 0 20px;
-//   }
-
-// }
-
-// .copyright-items {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-  
-//   li a {
-//     font-family: $main-font;
-//     font-size: 11px;
-//     line-height: 13px;
-//     color: #fff;
-//   }
-// }
-
-
-
-//   .nav__location {
-//     position: relative;
-
-//     .location__input-from {
-//       height: 40px;
-//       width: 65px;
-//       padding: 10px;
-//       border: 1px solid #E0E0E0;
-//       border-radius: 2px;
-//     }
-
-//     .location__input-from::placeholder,.location__input-from {
-//       color: $main-color-font;
-//       font-family: $main-font;
-//       font-size: 16px;
-//       line-height: 24px;
-//     }
-
-//     .nav__location-text {
-//       font-weight: 300;
-//       font-size: 16px;
-//       line-height: 19px;
-//       color: #626262;
-//       margin: 0 6px;
-//     }
-
-//     .location__input-to {
-//       height: 40px;
-//       width: 300px;
-//       border: 1px solid #E0E0E0;
-//       border-radius: 2px;
-//       padding-left: 30px;
-//     }
-
-//     .location__input-to::placeholder, .location__input-to {
-//       color: $main-color-font;
-//       font-family: $main-font;
-//       font-size: 16px;
-//       line-height: 24px;
-//     }
-
-//     .location__logo {
-//       position: absolute;
-//       left: 105px;
-//       top: 10px;
-//     }
-//   }
-
-//   .nav__items {
-//     display: flex;
-//     align-items: center;
-
-//   }
-// }
-
-// .main {
-//   padding: 0 50px;
-// }
-// .container {
-//   width: 100%;
-//   margin: 30px auto 20px;
-
-
-
-
-// }
-
-// .restourants__location-text {
-//   font-family: $main-font;
-//   font-size: 22px;
-//   line-height: 34px;
-//   margin-bottom: 20px;
-// }
-
-// .restourants__cards {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-//   align-content: center;
-  
-//   .container__card {
-//     margin: 0 10px 20px;
-//   }
-  
-//   .card__description {
-//     display: flex;
-//     flex-direction: column;
-//     flex-wrap: wrap;
-//     height: 80px;
-//     justify-content: space-around;
-
-//     .description__text {
-//       font-family: $main-font;
-//       font-size: 16px;
-//       font-weight: normal;
-//       line-height: 24px;
-//       color: $main-color-font;
-//     }
-
-//     .description__category {
-//       font-family: $main-font;
-//       font-weight: normal;
-//       font-size: 14px;
-//       line-height: 21px;
-//       color: #626262;
-//     }
-
-//     .description__delivery-time {
-//       font-family: $main-font;
-//       font-weight: normal;
-//       font-size: 13px;
-//       line-height: 21px;
-//       color: $main-color-font;
-//     }
-//   }
-// }
-
-// .footer {
-//   margin-top: 50px;
-//   background-color:#262626;
-//   padding: 0 10px 30px;
-
-//   .footer__container {
-//     max-width: 1124px;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     margin: auto;
-
-//     .footer__container-logo {
-//       padding: 60px 0 40px;
-//       border-bottom: 1px solid #ffffff57;
-//     }
-//   }
-// }
-
-// .footer__container-info {
-//   padding: 30px 0 55px;
-//   border-bottom: 1px solid #ffffff54;
-//   position: relative;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-
-//   .language__container {
-//     position: relative;
-//   }
-
-//   .languages-social-links{
-//     width: 290px;
-//     height: 40px;
-//     padding: 0 50px;
-//     background: #3B3B3B;
-//     border-radius: 2px;
-//     font-family: $main-font;
-//     font-size: 13px;
-//     color: #fff;
-//     line-height: 15px;
-//     appearance: none;
-//     -webkit-appearance: none;
-//   }
-
-//   .arrow-for-select {
-//     position: absolute;
-//     top: 16px;
-//     left: 256px;
-//   }
-
-//   .world-icon {
-//     position: absolute;
-//     left: 16px;
-//     top: 11px;
-//   }
-
-  // .htag-uber-eats {
-  //   padding: 20px 0;
-    
-  //   a {
-  //     font-family: $main-font;
-  //     font-size: 16px;
-  //     line-height: 19px;
-  //     color: #fff;
-
-  //     span {
-  //       color: #49A144;
-  //     }
-  //   }
-  // }
-
-//   .about-us-list, .addition-info-list {
-//     display: flex;
-//     height: 100%;
-//     flex-direction: column;
-//     justify-content: space-around;
-
-//     li a{
-//       font-family: $main-font;
-//       font-size: 13px;
-//       line-height: 15px;
-//       color: #fff;
-//     }
-//   }
-
-// }
-
-// .links-to-market {
-//   height: 150px;
-//   border-bottom: 1px solid #ffffff6b;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: row;
-//   justify-content: center;
-
-//   a {
-//     margin: 0 20px;
-//   }
-
-// }
-
-// .copyright-items {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-  
-//   li a {
-//     font-family: $main-font;
-//     font-size: 11px;
-//     line-height: 13px;
-//     color: #fff;
-//   }
-// }
-
