@@ -36,6 +36,7 @@ $breackpoint-small-device: 500px;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto; 
+  max-width: 1324px;
 }
 
 .nav__button-singIn {
@@ -139,6 +140,7 @@ $breackpoint-small-device: 500px;
   position: relative;
   padding-bottom: 15px;
   margin: 50px auto;
+  max-width: 1324px;
 
   .search-input {
     width: 100%;
@@ -213,6 +215,7 @@ $breackpoint-small-device: 500px;
 
 .container__card {
   margin-bottom: 30px;
+  max-width: 400px;
 }
 
 .container__card:hover {
@@ -227,7 +230,7 @@ $breackpoint-small-device: 500px;
   position: relative;
 
   .footer__container {
-    max-width: 1124px;
+    max-width: 1324px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -249,7 +252,8 @@ $breackpoint-small-device: 500px;
     border: none;
     height: 65px;
     width: 65px;
-    position: absolute;
+    margin-left: 90%;
+    position: sticky;
     bottom: 30px;
     background: #59BD5A;
     right: 20px;
@@ -342,5 +346,15 @@ $breackpoint-small-device: 500px;
     line-height: 13px;
     color: #fff;
     margin-top: 10px;
+  }
+}
+
+.footer__social, .about-us-info, .addition-info {
+  width: 33.3%;
+}
+
+.copyright-items {
+  li {
+    width: 33.3%
   }
 }

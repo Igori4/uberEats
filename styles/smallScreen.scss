@@ -1,3 +1,8 @@
+@media (max-width: 685px) {
+  .nav__location {
+    display: none;
+  }
+}
 @media (max-width: 639px) {
     .header {
     padding: 15px 20px;
@@ -115,4 +120,5 @@
         margin-top: 10px;
       }
     }
+  
   }
