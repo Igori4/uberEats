@@ -142,6 +142,10 @@ ul {
   .copyright-items li {
     margin-top: 10px;
   }
+
+  .up-scroll {
+    margin-left: 80%;
+  }
 }
 @media (min-width: 640px) {
   .nav__location-min {
@@ -169,6 +173,10 @@ ul {
 
   .copyright-items {
     justify-content: space-evenly;
+  }
+
+  .up-scroll {
+    margin-left: 90%;
   }
 }
 .header {
@@ -269,11 +277,6 @@ ul {
 
 .main {
   padding: 0 10px;
-}
-
-.container {
-  max-width: 1324px;
-  margin: auto;
 }
 
 .container__search-line {
@@ -382,7 +385,6 @@ ul {
   border: none;
   height: 65px;
   width: 65px;
-  margin-left: 90%;
   position: sticky;
   bottom: 30px;
   background: #59BD5A;
