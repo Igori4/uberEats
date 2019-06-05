@@ -271,6 +271,11 @@ ul {
   padding: 0 10px;
 }
 
+.container {
+  max-width: 1324px;
+  margin: auto;
+}
+
 .container__search-line {
   border-bottom: 1px solid #E0E0E0;
   position: relative;
