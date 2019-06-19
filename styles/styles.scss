@@ -36,7 +36,7 @@ $breackpoint-small-device: 500px;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto; 
-  max-width: 1324px;
+  max-width: 1024px;
 }
 
 .nav__button-singIn {
@@ -140,7 +140,7 @@ $breackpoint-small-device: 500px;
   position: relative;
   padding-bottom: 15px;
   margin: 50px auto;
-  max-width: 1324px;
+  max-width: 1024px;
 
   .search-input {
     width: 100%;
@@ -252,7 +252,7 @@ $breackpoint-small-device: 500px;
     border: none;
     height: 65px;
     width: 65px;
-    // margin-left: 90%;
+    margin-left: 90%;
     position: sticky;
     bottom: 30px;
     background: #59BD5A;
