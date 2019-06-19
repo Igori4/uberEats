@@ -152,9 +152,6 @@ ul {
     padding: 0 10px;
   }
 
-  .container__card {
-    width: 40%;
-  }
   .container__card img {
     width: 100%;
   }
@@ -169,6 +166,11 @@ ul {
 
   .copyright-items {
     justify-content: space-evenly;
+  }
+}
+@media (min-width: 1024px) {
+  .container__card {
+    width: 30%;
   }
 }
 .header {
@@ -271,9 +273,9 @@ ul {
   padding: 0 10px;
 }
 
-.container {
+.container__restourants {
   max-width: 1324px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .container__search-line {
@@ -401,6 +403,7 @@ ul {
   background: #3B3B3B;
   border-radius: 2px;
   border: none;
+  cursor: pointer;
   font-family: "Roboto", "sans-serif";
   min-width: 180px;
   font-size: 13px;
