@@ -142,6 +142,13 @@ ul {
   .copyright-items li {
     margin-top: 10px;
   }
+
+  .up-scroll {
+    border: none;
+    height: 65px;
+    width: 65px;
+    margin-left: 75%;
+  }
 }
 @media (min-width: 640px) {
   .nav__location-min {
